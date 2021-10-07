@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/pongploydev10/ProjectOutSource2021/what_to_eat_application/build/google_maps_flutter/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/Users/pongploydev10/.gradle/caches/transforms-2/files-2.1/ae66d64a96039d4c8dca038f4348340f/jetified-play-services-base-17.0.0/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/Users/pongploydev10/ProjectOutSource2021/what_to_eat_application/build/google_maps_flutter/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/Users/pongploydev10/.gradle/caches/transforms-2/files-2.1/ae66d64a96039d4c8dca038f4348340f/jetified-play-services-base-17.0.0/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/pongploydev10/ProjectOutSource2021/what_to_eat_application/build/google_maps_flutter/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/pongploydev10/.gradle/caches/transforms-2/files-2.1/ae66d64a96039d4c8dca038f4348340f/jetified-play-services-base-17.0.0/res/color/common_google_signin_btn_text_dark.xml"
+    }
+]
