@@ -158,6 +158,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/pongploydev10/development/flutter/.pub-cache/hosted/pub.dartlang.org/json_annotation-4.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/pongploydev10/development/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
       "packageUri": "lib/",
@@ -320,7 +326,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-10-07T19:34:25.239198Z",
+  "generated": "2021-10-08T18:48:38.827531Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-82.2.beta"
 }

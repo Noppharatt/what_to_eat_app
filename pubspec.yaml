@@ -40,6 +40,7 @@ dependencies:
   geolocator: ^6.1.9
   google_maps_flutter: ^2.0.1
   provider: ^4.0.4
+  json_annotation: ^4.1.0
   #location_permissions: ^4.0.1
   #permission_handler: ^8.2.2
   #location: ^4.3.0
