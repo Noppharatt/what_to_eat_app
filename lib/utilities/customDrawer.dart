@@ -3,15 +3,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:what_to_eat_application/about/aboutUsPage.dart';
-import 'package:what_to_eat_application/categories/categoriesPage.dart';
 import 'package:what_to_eat_application/contactUs/contactUsPage.dart';
-import 'package:what_to_eat_application/function/randomfood.dart';
+
 // import 'package:what_to_eat_application/favouritePage/favouritePage.dart';
-import 'package:what_to_eat_application/homePage/homePage.dart';
+
 import 'package:what_to_eat_application/myAccount/myAccountPage.dart';
+import 'package:what_to_eat_application/pages/BMR/bmrPage.dart';
+import 'package:what_to_eat_application/pages/categories/categoriesPage.dart';
+import 'package:what_to_eat_application/pages/function/randomfood.dart';
+import 'package:what_to_eat_application/pages/homePage/homePage.dart';
 // import 'package:what_to_eat_application/notification/notificationPage.dart';
 import 'package:what_to_eat_application/pages/login_Page.dart';
 import 'package:what_to_eat_application/pages/map/map_screen.dart';
+import 'package:what_to_eat_application/pages/map/simpleUsageMap.dart';
 import 'package:what_to_eat_application/utilities/dataUtilites.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -100,19 +104,24 @@ class _CustomDrawerState extends State<CustomDrawer> {
                 title: _menuItem('Random food', FontAwesomeIcons.random),
               ),
             ),
-            InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MyAccountPage()));
-              },
-              child: ListTile(
-                title: _menuItem('My Account', FontAwesomeIcons.userCircle),
-              ),
-            ),
+            // InkWell(
+            //   onTap: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => MyAccountPage()));
+            //   },
+            //   child: ListTile(
+            //     title: _menuItem('My Account', FontAwesomeIcons.userCircle),
+            //   ),
+            // ),
               InkWell(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => MapStoreLayoutScreen()));
+
+                    //   Navigator.push(context,
+                    // MaterialPageRoute(builder: (context) => SimpleUsage()));
+
+                   
               },
               child: ListTile(
                 title: _menuItem('Map', FontAwesomeIcons.map),
@@ -130,7 +139,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => RandomFood()));
+                    MaterialPageRoute(builder: (context) => BMRlayoutPage()));
               },
               child: ListTile(
                 title: _menuItem('Function', FontAwesomeIcons.heartBroken),
@@ -147,24 +156,24 @@ class _CustomDrawerState extends State<CustomDrawer> {
             //     title: _menuItem('Notifications', FontAwesomeIcons.bell),
             //   ),
             // ),
-            InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => AboutUsPage()));
-              },
-              child: ListTile(
-                title: _menuItem('About', FontAwesomeIcons.bookReader),
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ContactUsPage()));
-              },
-              child: ListTile(
-                title: _menuItem('Contact Us', FontAwesomeIcons.envelope),
-              ),
-            ),
+            // InkWell(
+            //   onTap: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => AboutUsPage()));
+            //   },
+            //   child: ListTile(
+            //     title: _menuItem('About', FontAwesomeIcons.bookReader),
+            //   ),
+            // ),
+            // InkWell(
+            //   onTap: () {
+            //     Navigator.push(context,
+            //         MaterialPageRoute(builder: (context) => ContactUsPage()));
+            //   },
+            //   child: ListTile(
+            //     title: _menuItem('Contact Us', FontAwesomeIcons.envelope),
+            //   ),
+            // ),
           ],
         ),
       ),

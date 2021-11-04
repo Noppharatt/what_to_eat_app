@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, file_names
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -204,6 +206,7 @@ class _ArticleDetailsPageState extends State<ArticleDetailsPage> {
                 ),
               ),
             ),
+            // ignore: deprecated_member_use
             FlatButton.icon(
                 onPressed: () {},
                 icon: Icon(

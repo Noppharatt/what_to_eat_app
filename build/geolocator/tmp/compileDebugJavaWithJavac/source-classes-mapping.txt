@@ -1,9 +1,9 @@
 com/baseflow/geolocator/MethodCallHandlerImpl.java
  com.baseflow.geolocator.MethodCallHandlerImpl
-com/baseflow/geolocator/location/LocationServiceListener.java
- com.baseflow.geolocator.location.LocationServiceListener
 com/baseflow/geolocator/location/PositionChangedCallback.java
  com.baseflow.geolocator.location.PositionChangedCallback
+com/baseflow/geolocator/location/LocationServiceListener.java
+ com.baseflow.geolocator.location.LocationServiceListener
 com/baseflow/geolocator/permission/LocationPermission.java
  com.baseflow.geolocator.permission.LocationPermission
  com.baseflow.geolocator.permission.LocationPermission$1
@@ -41,9 +41,9 @@ com/baseflow/geolocator/StreamHandlerImpl.java
  com.baseflow.geolocator.StreamHandlerImpl
 com/baseflow/geolocator/location/FlutterLocationServiceListener.java
  com.baseflow.geolocator.location.FlutterLocationServiceListener
-com/baseflow/geolocator/utils/Utils.java
- com.baseflow.geolocator.utils.Utils
 com/baseflow/geolocator/GeolocatorPlugin.java
  com.baseflow.geolocator.GeolocatorPlugin
+com/baseflow/geolocator/utils/Utils.java
+ com.baseflow.geolocator.utils.Utils
 com/baseflow/geolocator/permission/PermissionResultCallback.java
  com.baseflow.geolocator.permission.PermissionResultCallback

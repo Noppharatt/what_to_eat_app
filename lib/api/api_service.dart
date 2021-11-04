@@ -4,7 +4,7 @@ import '../model/login_model.dart';
 
 class APIService {
   Future<LoginResponseModel> login(LoginRequestModel requestModel) async {
-    String url = "https://reqres.in/api/login";
+    String url = "http://128.199.109.243/api/post/postlogin.php";
 
     var urlCon = Uri.parse(url);
 
