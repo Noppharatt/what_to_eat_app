@@ -92,7 +92,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: ListTile(
-                title: _menuItem('Discovery', FontAwesomeIcons.meteor),
+                title: _menuItem('HOME', FontAwesomeIcons.home),
               ),
             ),
             InkWell(
@@ -101,7 +101,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     MaterialPageRoute(builder: (context) => CategoriesPage()));
               },
               child: ListTile(
-                title: _menuItem('Random food', FontAwesomeIcons.random),
+                title: _menuItem('RANDOM FOOD', FontAwesomeIcons.random),
               ),
             ),
             // InkWell(
@@ -113,27 +113,18 @@ class _CustomDrawerState extends State<CustomDrawer> {
             //     title: _menuItem('My Account', FontAwesomeIcons.userCircle),
             //   ),
             // ),
-              InkWell(
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MapStoreLayoutScreen()));
-
-                    //   Navigator.push(context,
-                    // MaterialPageRoute(builder: (context) => SimpleUsage()));
-
-                   
-              },
-              child: ListTile(
-                title: _menuItem('Map', FontAwesomeIcons.map),
-              ),
-            ),
             InkWell(
               onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MapStoreLayoutScreen()));
+
+                //   Navigator.push(context,
+                // MaterialPageRoute(builder: (context) => SimpleUsage()));
               },
               child: ListTile(
-                title: _menuItem('Login', FontAwesomeIcons.signInAlt),
+                title: _menuItem('MAP', FontAwesomeIcons.mapMarkedAlt),
               ),
             ),
             InkWell(
@@ -142,9 +133,19 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     MaterialPageRoute(builder: (context) => BMRlayoutPage()));
               },
               child: ListTile(
-                title: _menuItem('Function', FontAwesomeIcons.heartBroken),
+                title: _menuItem('FUNCTION', FontAwesomeIcons.fan),
               ),
             ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginPage()));
+              },
+              child: ListTile(
+                title: _menuItem('LOGIN', FontAwesomeIcons.signInAlt),
+              ),
+            ),
+
             // InkWell(
             //   onTap: () {
             //     Navigator.push(
