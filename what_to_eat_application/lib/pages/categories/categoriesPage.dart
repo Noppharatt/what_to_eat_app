@@ -49,7 +49,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: mainLightColor,
-      appBar: customAppBar('RandomFood'),
+      appBar: customAppBar('RANDOMFOOD'),
       drawer: CustomDrawer(),
       body: Container(
         height: double.infinity,
@@ -72,6 +72,15 @@ class _CategoriesPageState extends State<CategoriesPage> {
                         _getRandomFoot(3);
                         break;
                       case 4:
+                        _getRandomFoot(8);
+                        break;
+                      case 5:
+                        _getRandomFoot(8);
+                        break;
+                      case 6:
+                        _getRandomFoot(8);
+                        break;
+                      case 7:
                         _getRandomFoot(8);
                         break;
 

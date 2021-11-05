@@ -44,6 +44,8 @@ dependencies:
   flutter_svg: ^0.22.0
   smooth_star_rating: ^1.0.4
   fluttertoast: ^8.0.8
+  animated_button: ^0.2.0
+  carousel_slider: ^3.0.0
   #location_permissions: ^4.0.1
   #permission_handler: ^8.2.2
   #location: ^4.3.0
@@ -81,6 +83,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/burger.png
+    - assets/images/NewProject.png
     - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,6 +1,6 @@
 // ignore: file_names
 // ignore_for_file: file_names
-
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,16 +15,14 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-List<String> myTitles = ['Food', 'Run', 'Lifestyle', 'Education'];
-
-List<Color> myColors = [
-  mainDarkColor,
-  mainLightColor,
-  mainLightColor,
-  mainLightColor,
+final List<String> imageList = [
+  "assets/images/NewProject.png",
+  "assets/images/qr.png",
 ];
 
 class _HomePageState extends State<HomePage> {
+  get imageList => null;
+
   @override
   // void initState() {
   //   super.initState();
@@ -42,94 +40,108 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mainLightColor,
-      appBar: customAppBar('What to eat'),
-      drawer: CustomDrawer(),
-      body: ListView(
-        children: <Widget>[
-          // Padding(
-          //   padding: const EdgeInsets.all(8.0),
-          //   child: Text(
-          //     'Top New Stories ',
-          //     style: TextStyle(
-          //         color: DataUtilities.mainDarkColor,
-          //         fontSize: 20,
-          //         fontWeight: FontWeight.bold),
-          //   ),
-          // ),
-          // Container(
-          //   height: MediaQuery.of(context).size.height * 0.12,
-          //   child: ListView(
-          //     scrollDirection: Axis.horizontal,
-          //     shrinkWrap: true,
-          //     children: <Widget>[
-          //       _storyCard(1),
-          //       _storyCard(5),
-          //       _storyCard(0),
-          //       _storyCard(2),
-          //       _storyCard(4),
-          //       _storyCard(3),
-          //       _storyCard(1),
-          //     ],
-          //   ),
-          // ), -เป็นส่วนสตอรี่ข้างบน
-
-          const Padding(
-            padding: EdgeInsets.only(left: 18.0, right: 18),
-            child: Divider(),
-          ),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.09,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              shrinkWrap: true,
-              children: <Widget>[
-                _filterCard("Today", FontAwesomeIcons.calendarDay),
-                _filterCard("Last Week", FontAwesomeIcons.calendarWeek),
-                _filterCard("Last Month", FontAwesomeIcons.calendar),
-              ],
+        backgroundColor: mainLightColor,
+        appBar: customAppBar('What to eat'),
+        drawer: CustomDrawer(),
+        body: ListView(
+          padding: const EdgeInsets.all(8),
+          children: <Widget>[
+            new Image.asset(
+              'assets/images/NewProject.png',
+              fit: BoxFit.cover,
             ),
-          ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 8.0),
-          //   child: Text(
-          //     'Articles ',
-          //     style: TextStyle(
-          //         color: DataUtilities.mainDarkColor,
-          //         fontSize: 20,
-          //         fontWeight: FontWeight.bold),
-          //   ),
-          // ),
-          // Container(
-          //   height: MediaQuery.of(context).size.height * 0.60,
-          //   child: ListView(
-          //     scrollDirection: Axis.vertical,
-          //     physics: ClampingScrollPhysics(),
-          //     children: <Widget>[
-          //       _articleCard(DataUtilities.imageUrlCollection[4],
-          //           'New Dell Devices', 'Technology', 4),
-          //       _articleCard(DataUtilities.imageUrlCollection[1],
-          //           'Classic Car Events', 'Sport', 1),
-          //       _articleCard(DataUtilities.imageUrlCollection[6],
-          //           'Big Team For Android', 'Technology', 6),
-          //       _articleCard(DataUtilities.imageUrlCollection[2],
-          //           'New App Applications', 'Technology', 2),
-          //       _articleCard(DataUtilities.imageUrlCollection[3],
-          //           '2020 Apple keyword', 'Technology', 3),
-          //       _articleCard(DataUtilities.imageUrlCollection[5],
-          //           'Good Child Camera Shot', 'Art', 5),
-          //       _articleCard(DataUtilities.imageUrlCollection[0],
-          //           'Praktika Camera', 'Art', 0),
-          //     ],
-          //   ),
-          // ),
-        ],
-      ),
-    );
+            Divider(),
+            new Image.asset(
+              'assets/images/qr.png',
+              fit: BoxFit.cover,
+            ),
+          ],
+        ));
+    // body: ListView(
+
+    //   children: <Widget>[
+
+    //     // Padding(
+    //     //   padding: const EdgeInsets.all(8.0),
+    //     //   child: Text(
+    //     //     'Top New Stories ',
+    //     //     style: TextStyle(
+    //     //         color: DataUtilities.mainDarkColor,
+    //     //         fontSize: 20,
+    //     //         fontWeight: FontWeight.bold),
+    //     //   ),
+    //     // ),
+    //     // Container(
+    //     //   height: MediaQuery.of(context).size.height * 0.12,
+    //     //   child: ListView(
+    //     //     scrollDirection: Axis.horizontal,
+    //     //     shrinkWrap: true,
+    //     //     children: <Widget>[
+    //     //       _storyCard(1),
+    //     //       _storyCard(5),
+    //     //       _storyCard(0),
+    //     //       _storyCard(2),
+    //     //       _storyCard(4),
+    //     //       _storyCard(3),
+    //     //       _storyCard(1),
+    //     //     ],
+    //     //   ),
+    //     // ), -เป็นส่วนสตอรี่ข้างบน
+
+    //     const Padding(
+    //       padding: EdgeInsets.only(left: 18.0, right: 18),
+    //       child: Divider(),
+    //     ),
+    //     Container(
+    //       height: MediaQuery.of(context).size.height * 0.09,
+    //       child: ListView(
+    //         scrollDirection: Axis.horizontal,
+    //         shrinkWrap: true,
+    //         children: <Widget>[
+    //           // _filterCard("Today", FontAwesomeIcons.calendarDay),
+    //           // _filterCard("Last Week", FontAwesomeIcons.calendarWeek),
+    //           // _filterCard("Last Month", FontAwesomeIcons.calendar),
+    //         ],
+    //       ),
+    //     ),
+    //     // Padding(
+    //     //   padding: const EdgeInsets.only(left: 8.0),
+    //     //   child: Text(
+    //     //     'Articles ',
+    //     //     style: TextStyle(
+    //     //         color: DataUtilities.mainDarkColor,
+    //     //         fontSize: 20,
+    //     //         fontWeight: FontWeight.bold),
+    //     //   ),
+    //     // ),
+    //     // Container(
+    //     //   height: MediaQuery.of(context).size.height * 0.60,
+    //     //   child: ListView(
+    //     //     scrollDirection: Axis.vertical,
+    //     //     physics: ClampingScrollPhysics(),
+    //     //     children: <Widget>[
+    //     //       _articleCard(DataUtilities.imageUrlCollection[4],
+    //     //           'New Dell Devices', 'Technology', 4),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[1],
+    //     //           'Classic Car Events', 'Sport', 1),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[6],
+    //     //           'Big Team For Android', 'Technology', 6),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[2],
+    //     //           'New App Applications', 'Technology', 2),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[3],
+    //     //           '2020 Apple keyword', 'Technology', 3),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[5],
+    //     //           'Good Child Camera Shot', 'Art', 5),
+    //     //       _articleCard(DataUtilities.imageUrlCollection[0],
+    //     //           'Praktika Camera', 'Art', 0),
+    //     //     ],
+    //     //   ),
+    //     // ),
+    //   ],
+    // ),
   }
 
   //Start the custom cards and Fields
-
 
   Widget _filterCard(String title, IconData myIcon) {
     return Padding(

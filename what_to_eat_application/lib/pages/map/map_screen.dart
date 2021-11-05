@@ -11,6 +11,7 @@ import 'package:what_to_eat_application/model/Locations.dart';
 import 'package:what_to_eat_application/pages/map/simpleUsageMap.dart';
 import 'package:what_to_eat_application/service/rest_api.dart';
 import 'package:what_to_eat_application/utilities/SlidingUpPanel.dart';
+import 'package:what_to_eat_application/utilities/customDrawer.dart';
 import 'package:what_to_eat_application/utilities/interactive_maps_marker.dart';
 import 'package:what_to_eat_application/utilities/utils.dart';
 
@@ -42,7 +43,7 @@ class _MapStoreLayoutScreenState extends State<MapStoreLayoutScreen> {
   static LatLng _center = const LatLng(45.521563, -122.677433);
   static LatLng _anotherLocation = const LatLng(45.509244, -122.633476);
   final Completer<GoogleMapController> _controller = Completer();
-  List<Locations> products =List();
+  List<Locations> products = List();
 
   final List<MarkerItem> markers = List();
 
@@ -100,6 +101,7 @@ class _MapStoreLayoutScreenState extends State<MapStoreLayoutScreen> {
               appBar: AppBar(
                 title: Text("Map"),
               ),
+              drawer: CustomDrawer(),
               body: FutureBuilder(
                   future: callAPI.getProducts(),
                   // ignore: missing_return
@@ -112,9 +114,9 @@ class _MapStoreLayoutScreenState extends State<MapStoreLayoutScreen> {
                       );
                     } else if (snapshot.connectionState ==
                         ConnectionState.done) {
-                       products = snapshot.data;
+                      products = snapshot.data;
 
-                       print(products[0].restAddress);
+                      print(products[0].restAddress);
 
                       products.asMap().forEach((idx, val) {
                         var restLatitude = double.tryParse(val.restLatitude);
@@ -133,13 +135,11 @@ class _MapStoreLayoutScreenState extends State<MapStoreLayoutScreen> {
                         print("itemContent $index");
                         MarkerItem item = markers[index];
 
-                         print('itemContent $products'); 
-                        return BottomTile(item: item , locations : products[index] );
-
-                         
+                        print('itemContent $products');
+                        return BottomTile(
+                            item: item, locations: products[index]);
                       };
 
-                
                       //map_screen.dart locations = products ;
 
                       print(products);

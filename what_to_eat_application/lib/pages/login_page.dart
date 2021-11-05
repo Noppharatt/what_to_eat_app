@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
     return ProgressHUD(
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Theme.of(context).accentColor,
+        backgroundColor: mainDarkColor,
         drawer: CustomDrawer(),
         body: SingleChildScrollView(
           child: _isLoading
@@ -150,29 +150,30 @@ class _LoginPageState extends State<LoginPage> {
 //                                               builder: (context) =>
 //                                                   HomePage()));
 
- AlertDialog(
-                                        title: const Text('AlertDialog Title'),
-                                        content: SingleChildScrollView(
-                                          child: ListBody(
-                                            children: const <Widget>[
-                                              Text(
-                                                  'This is a demo alert dialog.'),
-                                              Text(
-                                                  'Would you like to approve of this message?'),
-                                            ],
-                                          ),
+                                    AlertDialog(
+                                      title: const Text('AlertDialog Title'),
+                                      content: SingleChildScrollView(
+                                        child: ListBody(
+                                          children: const <Widget>[
+                                            Text(
+                                                'This is a demo alert dialog.'),
+                                            Text(
+                                                'Would you like to approve of this message?'),
+                                          ],
                                         ),
-                                        actions: <Widget>[
-                                          TextButton(
-                                            child: const Text('Approve'),
-                                            onPressed: () {
-                                              Navigator.of(context).pop();
-                                            },
-                                          ),
-                                        ],
-                                      );
+                                      ),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          child: const Text('Approve'),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                        ),
+                                      ],
+                                    );
 
-                                    if (mailController.text != "" && passwordController.text != "") {
+                                    if (mailController.text != "" &&
+                                        passwordController.text != "") {
                                       print(email);
                                       print(password);
                                       _login();

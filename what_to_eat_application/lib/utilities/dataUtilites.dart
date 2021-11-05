@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 //static final mainBgColor = Color(0xff16192e);
-final mainDarkColor = Color(0xFFDF3232);
+final mainDarkColor = Color(0xFF2FA2EA);
 final mainLightColor = Color(0xffffffff);
 //static final whiteColor = Color(0xffffffff);
-final darkGreenColor = Color(0xff23d7a5);
+final darkGreenColor = Color(0xFFB74CDE);
 final grayColor = const Color(0xff838696);
 final grayBgColor = const Color(0xffefeef3);
 
@@ -35,6 +35,9 @@ List<String> categoryImages = [
   'https://s359.kapook.com/pagebuilder/16a89fbd-6678-4d76-a4c0-66a1f0ea30d1.jpg',
   'https://img.wongnai.com/p/1920x0/2017/09/27/e3e5610ce8d9486aa9b1c33a83d7ab26.jpg',
   'https://shopee.co.th/blog/wp-content/uploads/2021/03/%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%99.jpg',
+  'https://shopee.co.th/blog/wp-content/uploads/2021/03/%E0%B9%80%E0%B8%A1%E0%B8%99%E0%B8%B9%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%AD%E0%B8%B5%E0%B8%AA%E0%B8%B2%E0%B8%99.jpg',
+  'https://img.wongnai.com/p/l/2017/06/26/19db68d9e1084117820a4c0ca37bfd0f.jpg',
+  'https://www.prachachat.net/wp-content/uploads/2020/08/123-2.jpg',
 ];
 
 List<String> categoryTitles = [
@@ -43,6 +46,9 @@ List<String> categoryTitles = [
   'ยำ',
   'ทอด',
   'อาหารอิสาน',
+  'แพ้อาหารทะเล',
+  'คนรักเนื้อ',
+  'บุฟเฟต์',
 ];
 List<String> categoryTitlesDouble = [
   'Fashion',

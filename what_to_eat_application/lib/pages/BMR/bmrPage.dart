@@ -5,6 +5,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:what_to_eat_application/service/rest_api.dart';
+import 'package:what_to_eat_application/utilities/customDrawer.dart';
 import 'package:what_to_eat_application/utilities/dataUtilites.dart';
 
 class BMRlayoutPage extends StatefulWidget {
@@ -13,9 +14,9 @@ class BMRlayoutPage extends StatefulWidget {
 }
 
 class _MyAppState extends State<BMRlayoutPage> {
-  int currentindex = 0 ;
+  int currentindex = 0;
   Object body;
-  String bmr ;
+  String bmr;
   TextEditingController heightController = TextEditingController();
   TextEditingController weightController = TextEditingController();
   TextEditingController ageController = TextEditingController();
@@ -30,7 +31,7 @@ class _MyAppState extends State<BMRlayoutPage> {
   void initState() {
     super.initState();
 
-    bmr = "" ;
+    bmr = "";
     // fname = FocusNode();
     // lname = FocusNode();
     // age = FocusNode();
@@ -57,51 +58,51 @@ class _MyAppState extends State<BMRlayoutPage> {
             title: Text("คำนวณ BMI"),
             centerTitle: true,
           ),
+          drawer: CustomDrawer(),
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-
                     Card(
-                       color: Colors.red,
-                          elevation: 30.0,
+                      color: Colors.red,
+                      elevation: 30.0,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Stack(
                           children: [
-                             Image.network("https://i.pinimg.com/originals/2d/19/82/2d19827885bece6162f64c2d99099416.jpg"),
-                            
-                             Container(
-                               alignment : Alignment.bottomCenter,
-                               child: Text(
-                            'เครื่องคำนวณการเผาผลาญ (BMR)',
-                            style: TextStyle(
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.w800,
-                                color: Colors.red,
-                            ),
-                          ),
-                             )
+                            Image.network(
+                                "https://i.pinimg.com/originals/2d/19/82/2d19827885bece6162f64c2d99099416.jpg"),
+                            Container(
+                              alignment: Alignment.bottomCenter,
+                              child: Text(
+                                'เครื่องคำนวณการเผาผลาญ (BMR)',
+                                style: TextStyle(
+                                  fontSize: 30.0,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.red,
+                                ),
+                              ),
+                            )
                           ],
-                          
                         ),
                       ),
                     ),
-                   SizedBox(
+                    SizedBox(
                       height: 50,
                     ),
                     Row(
                       children: [
-                    redioButton("Male","assets/images/male.jpeg",Colors.blue,0),
-                    redioButton("FeMale","assets/images/female.png",Colors.pink,1),
+                        redioButton(
+                            "Male", "assets/images/male.jpeg", Colors.blue, 0),
+                        redioButton("FeMale", "assets/images/female.png",
+                            Colors.pink, 1),
                       ],
                     ),
                     SizedBox(
                       height: 50,
                     ),
-                    
                     TextFormField(
                       controller: heightController,
                       autofocus: true,
@@ -173,10 +174,10 @@ class _MyAppState extends State<BMRlayoutPage> {
                           if (val['status_message'] != "Failed") {
                             setState(() {
                               // _isLoading = false ;
-                           var   bmrdd = val['BMR'];
-                         bmr =  bmrdd.toString();
+                              var bmrdd = val['BMR'];
+                              bmr = bmrdd.toString();
                             });
-          
+
                             print('Successfully');
                           } else {
                             setState(() {
@@ -185,11 +186,9 @@ class _MyAppState extends State<BMRlayoutPage> {
                             // ignore: avoid_print
                             print(' fail');
                           }
-          
+
                           print(val[""]);
                         });
-          
-                        
                       },
                       child: Text('คำนวณ'),
                       color: Colors.lightBlueAccent,
@@ -221,7 +220,8 @@ class _MyAppState extends State<BMRlayoutPage> {
                                       child: Text(
                                         "BMR (kcl)",
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 20.0),
+                                            color: Colors.white,
+                                            fontSize: 20.0),
                                       ),
                                     ),
                                   ],
@@ -229,12 +229,12 @@ class _MyAppState extends State<BMRlayoutPage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 30.0),
                                   child: Text(
-                             //       !input.contains('@')
-                            //     ? "Email Id should be valid"
-                            //     : null
-                                    bmr != null ? bmr : "กรุณากรอกใหม่" ,
+                                    //       !input.contains('@')
+                                    //     ? "Email Id should be valid"
+                                    //     : null
+                                    bmr != null ? bmr : "กรุณากรอกใหม่",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize:  20.0),
+                                        color: Colors.white, fontSize: 20.0),
                                   ),
                                 ),
                                 Container(
@@ -262,41 +262,37 @@ class _MyAppState extends State<BMRlayoutPage> {
 
   void changeIndex(int index) {
     setState(() {
-      currentindex = index ;
+      currentindex = index;
     });
-}
+  }
 
-
-  Widget redioButton(String value ,String image, Color color , int index) {
-    
+  Widget redioButton(String value, String image, Color color, int index) {
     return Expanded(
-      child: Container(
-        margin:  EdgeInsets.symmetric(horizontal: 12.0),
-        child: FlatButton(
-          height: 100,
-          color: currentindex ==index ? color : Colors.grey[200],
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.0) ),
-          onPressed: (){
-            changeIndex(index);
-          },
-          child: Row(
-            children: [
-              Image(
-                image: AssetImage(image),
-                height: 30,
-                width: 50,),
-              Text(
-                value ,
-                style: TextStyle(
-                  color:  currentindex == index ? Colors.white : color
-                ),
-                ),
-            ],
-          ),
-          ),
-          
-      ));
+        child: Container(
+      margin: EdgeInsets.symmetric(horizontal: 12.0),
+      child: FlatButton(
+        height: 100,
+        color: currentindex == index ? color : Colors.grey[200],
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+        onPressed: () {
+          changeIndex(index);
+        },
+        child: Row(
+          children: [
+            Image(
+              image: AssetImage(image),
+              height: 30,
+              width: 50,
+            ),
+            Text(
+              value,
+              style: TextStyle(
+                  color: currentindex == index ? Colors.white : color),
+            ),
+          ],
+        ),
+      ),
+    ));
   }
 
   Future<dynamic> _getBMR() async {
@@ -312,8 +308,6 @@ class _MyAppState extends State<BMRlayoutPage> {
 //     "age":"1"
 // }
 
-    
-
     var regData = {
       "gender": currentindex == 1 ? "male" : "female",
       "height": heightController.text,
@@ -327,5 +321,3 @@ class _MyAppState extends State<BMRlayoutPage> {
     return body = json.decode(response.body);
   }
 }
-
-

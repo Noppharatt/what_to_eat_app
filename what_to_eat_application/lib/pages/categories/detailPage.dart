@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:what_to_eat_application/model/reqRandomFoodModel.dart';
+import 'package:what_to_eat_application/pages/map/map_screen.dart';
 
 import 'OrderButton.dart';
 import 'TitlePriceRating.dart';
@@ -27,6 +28,7 @@ class _DetailPageState extends State<DetailPage> {
     print(widget.reqRandomFoodModel.menu);
 
     return Scaffold(
+
         // backgroundColor: kPrimaryColor,
         appBar: detailsAppBar(widget.reqRandomFoodModel.menu, context),
         body: Column(
@@ -68,8 +70,11 @@ detailsAppBar(String menu, [BuildContext context]) {
         onPressed: () {},
       ),
       IconButton(
-        icon: SvgPicture.asset("assets/icons/more.svg"),
-        onPressed: () {},
+        icon: SvgPicture.asset("assets/icons/google-map.svg"),
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MapStoreLayoutScreen()));
+        },
       ),
     ],
   );
